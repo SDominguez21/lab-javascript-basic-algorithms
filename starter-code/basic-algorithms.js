@@ -51,11 +51,17 @@ if (!hacker1.localeCompare(hacker2)) {
   console.log(`What?! You both got the same name?`);
 }
 
-// Bonus
-/* 
-1. Get string
-2. Remove anything that's not alphanumeric
-3. toLowercase
-*/
+// BONUS
+let maybePalendrome = "Amor, Rooma";
+let stripped = maybePalendrome.replace(/[\W_]+/g, "").toLowerCase();
 
-// Lorem ipsum generator
+let reversed = stripped
+  .split("")
+  .reverse()
+  .join("");
+
+if (stripped === reversed) {
+  console.log("yup, its a palendrome");
+} else {
+  console.log("no just regular words");
+}
